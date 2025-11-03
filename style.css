@@ -1,144 +1,76 @@
 /* =============== RESET BÁSICO =============== */
 * {
-  box-sizing: border-box;            /* Inclui padding/borda no cálculo da largura/altura do elemento */
+  box-sizing: border-box;
 }
 
 html,
 body {
-  margin: 0;                          /* Remove margens padrão do navegador */
-  padding: 0;                         /* Remove espaçamentos internos padrão */
+  margin: 0;
+  padding: 0;
 }
 
 img {
-  max-width: 100%;                    /* Impede que a imagem ultrapasse a largura do contêiner */
-  display: block;                     /* Retira espaço extra que imagens inline geram */
+  max-width: 100%;
+  display: block;
 }
 
 a {
-  text-decoration: none;              /* Remove sublinhado padrão dos links */
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;         /* Mostra sublinhado ao passar o mouse (feedback visual) */
+  text-decoration: underline;
 }
 
 /* =============== TIPOGRAFIA E CORES =============== */
 body {
-  font-family: Arial, sans-serif;     /* Define a família de fontes principal */
-  line-height: 1.6;                   /* Aumenta o espaçamento entre linhas para facilitar a leitura */
-  color: #000000;                     /* Cor padrão do texto (preto) */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #3d3d3d; /* Cinza suave para o texto */
+  background-color: #faf7ff; /* Fundo lilás bem claro */
 }
 
 /* =============== HEADER =============== */
 .topo {
-  background: #5f3963;                /* Cor de fundo do topo (roxo-acinzentado escuro) */
-  color: #ffffff;                     /* Texto do topo em branco */
-  padding: 16px;                      /* Respiro interno para não “grudar” nas bordas */
+  background: #c9b6ff; /* Lilás pastel */
+  color: #ffffff;
+  padding: 16px;
+  text-align: center;
 }
 
 .logo {
-  margin: 0;                          /* Zera margens externas do título */
-  font-size: 24px;                    /* Tamanho da fonte do título */
+  margin: 0 0 8px 0;
+  font-size: 24px;
 }
 
 .menu {
-  margin-top: 8px;                    /* Espaço entre o título e os links do menu */
+  margin-top: 8px;
+  text-align: center;
 }
 
 .menu a {
-  color: #ffffff;                     /* Links do menu em branco */
-  margin-right: 16px;                 /* Espaço horizontal entre os links */
+  display: inline-block;
+  color: #ffffff;
+  margin: 0 12px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
 
-.menu a:last-child {
-  margin-right: 0;                    /* Remove espaço extra do último link */
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
 }
 
 /* =============== MAIN (CONTEÚDO) =============== */
 .principal {
-  padding: 20px;                      /* Respiro interno geral do conteúdo principal */
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .caixa {
-  background: #fcf8fb;                /* Fundo claro para destacar o bloco do fundo da página */
-  padding: 16px;                      /* Respiro interno do bloco */
-  border: 1px solid #e3d7e9;          /* Borda sutil para delimitar o bloco */
-  border-radius: 8px;                 /* Cantos arredondados suaves */
-  margin-bottom: 16px;                /* Espaço externo abaixo para separar blocos */
-}
-
-.texto {
-  margin-bottom: 12px;                /* Espaço abaixo do texto antes do próximo elemento */
-}
-
-.imagem {
-  margin-top: 12px;                   /* Espaço acima da imagem para separar do texto anterior */
-}
-
-/* Variações visuais para destacar blocos */
-.destaque {
-  background: #f7dbdf;                /* Fundo levemente vermelho para chamar atenção */
-}
-
-.importancia {
-  background: #ffedff;                /* Fundo levemente roxo para outra ênfase */
-}
-
-.introducao {
-  background: #cef5ed;                /* Fundo azul claro para introduções/avisos */
-}
-
-/* Cartões simples reutilizáveis (se precisar) */
-.bloco {
-  background: #ffffff;                /* Fundo branco para o cartão */
-  border: 1px solid #f1e9ed;          /* Borda sutil do cartão */
-  border-radius: 8px;                 /* Cantos arredondados do cartão */
-  padding: 12px;                      /* Respiro interno do cartão */
-  margin: 8px 0;                      /* Espaço vertical entre cartões */
-}
-
-/* =============== GALERIA EM GRADE (ATUAL) =============== */
-.galeria {
-  background: #eddcec;                /* Fundo lilas do bloco de galeria */
-}
-
-.imagens-galeria {
-  display: grid;                      /* Ativa layout em grade para as imagens */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas: mínimo 220px, máximo 1 fração */
-  gap: 12px;                          /* Espaço entre as células da grade */
-}
-
-.imagens-galeria img {
-  width: 100%;                        /* Faz cada imagem ocupar toda a largura da célula */
-  border-radius: 8px;                 /* Cantos arredondados das imagens */
-  border: 1px solid #d1c8f4;          /* Borda sutil ao redor das imagens */
-}
-
-/* =============== FOOTER =============== */
-.rodape {
-  background: #50385f;                /* Cor de fundo do rodapé */
-  color: #ffffff;                     /* Cor do texto do rodapé */
-  text-align: center;                 /* Centraliza o conteúdo do rodapé */
-  padding: 14px;                      /* Respiro interno do rodapé */
-}
-
-/*
-@media (min-width: 720px) {           /* Regras que só valem em telas a partir de 720px de largura */
-  .inicio .texto,
-  .inicio .imagem {
-    width: 50%;                       /* Divide a seção inicial em duas colunas iguais */
-    display: inline-block;            /* Coloca os blocos lado a lado (comportamento inline) */
-    vertical-align: middle;           /* Alinha verticalmente os blocos no meio */
-  }
-
-  .inicio .texto {
-    padding-right: 12px;              /* Espaço à direita do bloco de texto */
-  }
-
-  .inicio .imagem {
-    padding-left: 12px;               /* Espaço à esquerda do bloco de imagem */
-  }
-}
-*/
-
-
+  background: #f5f1ff; /* Fundo lilás clarinho */
+  padding: 16px;
+  border: 1px
