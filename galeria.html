@@ -73,4 +73,80 @@
 
     .imagens-galeria img {
       width: 100%;
-      aspect-rati
+      aspect-ratio: 1 / 1; /* mantém formato quadrado */
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(130, 100, 180, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .imagens-galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(130, 100, 180, 0.35);
+    }
+
+    /* ======== RODAPÉ ======== */
+    .rodape {
+      background: linear-gradient(90deg, #cdb4db, #b39ddb);
+      color: #4b2c7a;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      box-shadow: 0 -2px 8px rgba(90, 70, 120, 0.2);
+    }
+
+    .rodape b {
+      color: #6b44b1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPO -->
+  <header class="topo">
+    <h1 class="logo">Cultura Negra</h1>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="historia.html">História</a>
+      <a href="galeria.html">Galeria</a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="principal">
+
+    <!-- Texto de introdução -->
+    <div class="caixa introducao">
+      <div class="texto">
+        <h2>Galeria de Cultura Negra</h2>
+        <p>
+          A cultura negra no Brasil é marcada pela resistência, pela força de seus povos e pela riqueza de suas tradições. Ela se expressa de várias formas: através da música, dança, religiosidade, culinária, e também na luta por igualdade e direitos.
+        </p>
+        <p>
+          Esta galeria reúne imagens que celebram e valorizam a contribuição histórica e cultural dos afro-brasileiros. Ao mesmo tempo, busca destacar a importância da preservação da memória e da luta contra o racismo estrutural.
+        </p>
+      </div>
+    </div>
+
+    <!-- Galeria de imagens -->
+    <div class="caixa galeria">
+      <div class="imagens-galeria">
+        <img src="IMAGEM/culturanegra1.jpg" alt="Mulher negra com pintura facial">
+        <img src="IMAGEM/culturanegra2.jpg" alt="Mulher negra com turbante">
+        <img src="IMAGEM/imgcultura2.jpeg" alt="Mulher negra trançando o cabelo">
+        <img src="IMAGEM/imgcultura1.jpg" alt="Mulheres negras">
+        <img src="IMAGEM/culturanegra5.jpg" alt="Mãos de tons diferentes para cima">
+        <img src="IMAGEM/culturanegra6.jpg" alt="Mulheres negras">
+        <img src="IMAGEM/culturanegra7.jpeg" alt="Criança negra com a mão nos cabelos de uma mulher negra">
+      </div>
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>&copy; 2025 — Projeto escolar. Feito por: <b>Camila Vieira</b></p>
+  </footer>
+
+</body>
+</html>
